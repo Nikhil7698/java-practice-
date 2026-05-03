@@ -7,12 +7,31 @@ public class ArrayShifting {
         }
         arr[0]=temp;
     }
+    public static void PrintAlternate(int arr[]){
+        int n=arr.length;
+        int i=0;
+        int j=n-1;
+        while(i<=j){
+            if(i==j){
+                System.out.println(arr[i]);
+                return;
+            }
+            else{
+                System.out.println(arr[i]);
+                i++;
+                System.out.println(arr[j]);
+                j--;
+            }
+        }
+    }
+
     static void main(){
         int arr[]={1,2,3,4,5};
-        shift1(arr);
+        PrintAlternate(arr);
+        /*shift1(arr);
         for(int a:arr){
             System.out.println(a + " ");
         }
-        System.out.println();
+        System.out.println();*/
     }
 }
